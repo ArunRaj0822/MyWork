@@ -17,15 +17,21 @@ public class Main {
         double avg=0;
         double sum=0;
         double max=students[0].salary;
+        double low=students[0].salary;
+
         for(Student s:students){
             sum+=s.salary;
             if(s.salary>max){
                 max=s.salary;
             }
+            if(s.salary<low){
+                low= s.salary;
+            }
             System.out.println(s);
         }
         avg=sum/n;
         System.out.println(max);
+        System.out.println(low);
         System.out.println("avg salary:"+avg);
     }
 }
